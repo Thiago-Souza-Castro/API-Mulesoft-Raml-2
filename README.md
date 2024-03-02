@@ -1,5 +1,4 @@
-Vitaminas/C
-Uma API simples, chamada VitaminaCAPI, oferecendo informações sobre alimentos ricos em Vitamina C. Disponibiliza endpoints para listar alimentos, buscar por nome e realizar um health check.
+Uma API simples, oferecendo informações sobre alimentos ricos em Vitamina C. Disponibiliza endpoints para listar alimentos, buscar por nome e realizar um health check.
 
 Endpoints
 
