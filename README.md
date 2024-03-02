@@ -9,5 +9,6 @@ GET:
 Busca um alimento por nome.
 
 /healthcheck
+
 GET:
 Verifica o status da API e do banco de dados.
