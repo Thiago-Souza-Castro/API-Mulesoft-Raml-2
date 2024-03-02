@@ -1,0 +1,79 @@
+#%RAML 1.0
+title: VitaminaCAPI
+version: 1.0
+baseUri: http://localhost:8081
+mediaType: application/json
+
+types:
+  Alimento:
+    type: object
+    properties:
+      id: integer
+      nome: string
+      valorVitaminaCmg100g: number
+    example:
+      id: 1
+      nome: "Laranja"
+      valorVitaminaCmg100g: 53.2
+
+  HealthCheckResponse:
+    type: object
+    properties:
+      apiStatus: string
+      databaseStatus: string
+    example:
+      apiStatus: "OK"
+      databaseStatus: "OK"
+
+/vitaminaC:
+  get:
+    description: Retorna uma lista de todos os alimentos ricos em Vitamina C.
+    responses:
+      200:
+        body:
+          application/json:
+            type: Alimento[]
+            example: [
+              {
+                "id": 1,
+                "nome": "Laranja",
+                "valorVitaminaCmg100g": 53.2
+              },
+              {
+                "id": 2,
+                "nome": "Morango",
+                "valorVitaminaCmg100g": 58.8
+              }
+            ]
+
+  /buscar:
+    get:
+      description: Busca um alimento por nome e retorna informações específicas sobre ele.
+      queryParameters:
+        nome:
+          required: true
+          type: string
+      responses:
+        200:
+          body:
+            application/json:
+              type: Alimento[]
+        404:
+          body:
+            application/json:
+              properties:
+                error: string
+              example:
+                error: "Alimento não encontrado."
+
+/healthcheck:
+  get:
+    description: Verifica o status da API e da conexão com o banco de dados.
+    responses:
+      200:
+        body:
+          application/json:
+            type: HealthCheckResponse
+            example:
+              apiStatus: "OK"
+              databaseStatus: "OK"
