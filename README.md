@@ -1,5 +1,4 @@
-Uma API simples, oferecendo informações sobre alimentos ricos em Vitamina C. Disponibiliza endpoints para listar alimentos, buscar por nome e realizar um health check.
-
+Uma API simples, desenvolvida utilizando MuleSoft para o design da API e Anypoint para configurar os fluxos. Utiliza MySQL como banco de dados para armazenar informações sobre alimentos ricos em Vitamina C. O front-end da API foi construído com React, proporcionando uma interface visual amigável.
 Endpoints
 
 /vitaminaC
