@@ -12,3 +12,5 @@ Busca um alimento por nome.
 
 GET:
 Verifica o status da API e do banco de dados.
+
+![image](https://github.com/Thiago-Souza-Castro/API-Mulesoft-Raml-2/assets/136822553/a91e122d-54ef-4fab-a4a2-0f365f213ec7)
